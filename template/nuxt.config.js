@@ -10,17 +10,39 @@ module.exports = {
       { hid: 'description', name: 'description', content: '{{escape description }}' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', type: 'text/css', href: 'https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css' },
+      { rel: 'stylesheet', type: 'text/css', href: 'https://fonts.googleapis.com/css?family=Open+Sans' }
     ]
   },
   /*
+  ** Load any custom CSS
+  */
+  css: [
+    { src: '~/assets/scss/main.scss', lang: 'scss' }
+  ],
+  /*
   ** Customize the progress bar color
   */
-  loading: { color: '#3B8070' },
+  loading: { color: '#EF574B' },
+  /*
+  ** We're building a single page app, with no server-side rendering
+  */
+  mode: 'spa',
   /*
   ** Build configuration
   */
   build: {
+    /*
+    ** Extract CSS to an external file
+    */
+    extractCSS: true,
+    /*
+    ** Libraries and paths to concat into the vendor bundle
+    */
+    vendor: [
+      'gsap'
+    ],
     /*
     ** Run ESLint on save
     */
@@ -36,4 +58,3 @@ module.exports = {
     }
   }
 }
-
