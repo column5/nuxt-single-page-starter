@@ -22,7 +22,7 @@ module.exports = {
       'type': 'string',
       'required': false,
       'message': 'Project description',
-      'default': 'Nuxt.js project'
+      'default': 'Column Five Nuxt.js project'
     },
     author: {
       'type': 'string',
