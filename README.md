@@ -1,4 +1,4 @@
-# Starter
+# Column Five Single-Page Starter (fork from Nuxt Starter)
 
 A [Nuxt.js](https://github.com/nuxt/nuxt.js) starter project template without the distraction of a complicated development environment.
 
@@ -23,7 +23,7 @@ Make sure to have `node 8.0+` and `npm 5.0+` installed
 This is a project template for [vue-cli](https://github.com/vuejs/vue-cli).
 
 ``` bash
-$ vue init nuxt-community/starter-template my-project  
+$ vue init columnfive/nuxt-single-page-starter my-project  
 $ cd my-project                     
 # install dependencies
 $ npm install # Or yarn install
