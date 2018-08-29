@@ -32,11 +32,8 @@ module.exports = {
       type: 'checkbox',
       message: 'Additional Libraries',
       choices: [{
-        name: 'GreenSock',
-        value: 'gsap'
-      }, {
-        name: 'ScrollMagic + ks-vue-scrollmagic',
-        value: 'scrollmagic'
+        name: 'ScrollMagic + GSAP (ks-vue-scrollmagic)',
+        value: 'ks-vue-scrollmagic'
       }]
     }
   },

@@ -49,7 +49,9 @@ module.exports = {
     ** Libraries and paths to concat into the vendor bundle
     */
     vendor: [
-      {{join_choices libs}}
+      {{#each libs}}
+      '{{@key}}'{{#if_eq @index libs.length-1}},{{/if_eq}}
+      {{/each}}
     ],
     /*
     ** Run ESLint on save
