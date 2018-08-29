@@ -13,7 +13,13 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "eventsource-polyfill": "^0.9.6",
+    {{#if libs.gsap}}
     "gsap": "^2.0.1",
+    {{/if}}
+    {{#if libs.scrollmagic}}
+    "ks-vue-scrollmagic": "^1.0.2",
+    {{/if}}
     "nuxt": "^1.0.0"
   },
   "devDependencies": {

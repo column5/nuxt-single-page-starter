@@ -30,6 +30,14 @@ module.exports = {
   */
   mode: 'spa',
   /*
+  ** Vue Plugins
+  */
+  plugins: [
+    {{#if libs.scrollmagic}}
+    { src: '~/plugins/vue-scrollmagic', ssr: false }
+    {{/if}}
+  ],
+  /*
   ** Build configuration
   */
   build: {
@@ -41,7 +49,7 @@ module.exports = {
     ** Libraries and paths to concat into the vendor bundle
     */
     vendor: [
-      'gsap'
+      {{join_choices libs}}
     ],
     /*
     ** Run ESLint on save
