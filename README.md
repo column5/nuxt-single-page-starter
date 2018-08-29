@@ -4,6 +4,16 @@ A [Nuxt.js](https://github.com/nuxt/nuxt.js) starter project template without th
 
 Live demo: https://starter.nuxtjs.org
 
+### Modifications from Column Five
+* Includes GSAP v2
+* Includes SASS and SASS loader
+* Creates a vendor bundle
+* Extracts CSS to external file
+* Includes example SCSS files
+* Sets the runtime to `spa`
+* Includes `main.scss` in the build config, not imported
+* Includes Open Sans Google Font (example)
+
 ## Prerequisites
 
 Make sure to have `node 8.0+` and `npm 5.0+` installed
@@ -46,4 +56,3 @@ $ npm start
 # generate a static project
 $ npm run generate
 ```
-
