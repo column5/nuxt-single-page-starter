@@ -13,7 +13,22 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    {{#if_eq cssFramework 'bootstrap-sass'}}
+    "bootstrap-sass": "^3.3.7",
+    {{/if_eq}}
+    {{#if_eq cssFramework 'bootstrap-vue'}}
+    "bootstrap-vue": "^2.0.0-rc.11",
+    {{/if_eq}}
+    {{#if_eq cssFramework 'bourbon-neat'}}
+    "bourbon-neat": "^3.0.0",
+    {{/if_eq}}
+    {{#if_eq cssFramework 'bulma'}}
+    "bulma": "^0.7.1",
+    {{/if_eq}}
     "eventsource-polyfill": "^0.9.6",
+    {{#if_eq cssFramework 'flexboxgrid2'}}
+    "flexboxgrid2": "^7.2.1",
+    {{/if_eq}}
     {{#if libs.ks-vue-scrollmagic}}
     "ks-vue-scrollmagic": "^1.0.2",
     {{/if}}

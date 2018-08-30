@@ -28,6 +28,29 @@ module.exports = {
       'type': 'string',
       'message': 'Author'
     },
+    cssFramework: {
+      type: 'list',
+      message: 'Choose a CSS Framework',
+      required: false,
+      choices: [{
+        name: 'None'
+      }, {
+        name: 'Bulma',
+        value: 'bulma' // See if this can be an object to pass into package.json to get the version #s
+      }, {
+        name: 'Bootstrap SASS',
+        value: 'bootstrap-sass'
+      }, {
+        name: 'Bootstrap Vue',
+        value: 'bootstrap-vue'
+      }, {
+        name: 'Bourbon Neat',
+        value: 'bourbon-neat'
+      }, {
+        name: 'Flexbox Grid',
+        value: 'flexboxgrid2'
+      }]
+    },
     libs: {
       type: 'checkbox',
       message: 'Additional Libraries',
@@ -35,7 +58,7 @@ module.exports = {
         name: 'ScrollMagic + GSAP (ks-vue-scrollmagic)',
         value: 'ks-vue-scrollmagic'
       }]
-    }
+    },
   },
   completeMessage: '{{#inPlace}}To get started:\n\n  npm install # Or yarn\n  npm run dev{{else}}To get started:\n\n  cd {{destDirName}}\n  npm install # Or yarn\n  npm run dev{{/inPlace}}'
 };
