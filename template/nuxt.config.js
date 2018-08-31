@@ -19,9 +19,9 @@ module.exports = {
   ** Load any custom CSS
   */
   css: [
-    {{#if cssFramework === 'flexboxgrid2'}}
+    {{#if_eq cssFramework 'flexboxgrid2'}},
     { src: 'flexboxgrid2', lang: 'css' }
-    {{/if}}
+    {{/if_eq}}
     { src: '~/assets/scss/main.scss', lang: 'scss' }
   ],
   /*

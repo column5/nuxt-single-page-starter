@@ -7,7 +7,7 @@
   @return ( ( 1 / $context ) * $target)+0rem;
 }
 
-{{#if cssFramework === 'bourbon-neat'}}
+{{#if_eq cssFramework 'bourbon-neat'}}
 @mixin c5-grid-container-width($grid) {
   @include grid-media($grid) {
     max-width: map-get($grid, 'container');
@@ -57,4 +57,4 @@ $neat-grid--xl: (
   container: $screen-xl-min - 30px
 );
 @import '~bourbon-neat/core/neat';
-{{/if}}
+{{/if_eq}}
