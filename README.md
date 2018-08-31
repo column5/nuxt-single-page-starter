@@ -5,7 +5,7 @@ A [Nuxt.js](https://github.com/nuxt/nuxt.js) starter project template without th
 Live demo: https://starter.nuxtjs.org
 
 ### Modifications from Column Five
-* Includes GSAP v2
+* Includes optional extra libraries and frameworks
 * Includes SASS and SASS loader
 * Creates a vendor bundle
 * Extracts CSS to external file
@@ -13,6 +13,18 @@ Live demo: https://starter.nuxtjs.org
 * Sets the runtime to `spa`
 * Includes `main.scss` in the build config, not imported
 * Includes Open Sans Google Font (example)
+
+### Optional Extra Libraries
+
+#### CSS frameworks
+* Bulma (no examples yet)
+* Bootstrap (no examples yet)
+* Bootstrap-Vue (no examples yet)
+* Bourbon-Neat
+* Flexboxgrid
+
+#### Optional JS Frameworks
+* Scrollspy + GSAP (only example Vue plugin)
 
 ## Prerequisites
 

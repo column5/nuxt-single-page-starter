@@ -1,6 +1,17 @@
-$screen-sm-min: 524px;
+$screen-sm-min: 576px;
 $screen-md-min: 768px;
 $screen-lg-min: 992px;
 $screen-xl-min: 1200px;
 
 $font-body: 'Open Sans', sans-serif;
+
+$white: #fff;
+$black: #000;
+/*
+** Remember, vars can be exported here and imported into JS via:
+** import cssvars from '~/assets/vars.scss'
+*/
+:export {
+  white: $white; // cssvars.white
+  black: $black; // cssvars.black
+}

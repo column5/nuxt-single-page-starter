@@ -19,6 +19,9 @@ module.exports = {
   ** Load any custom CSS
   */
   css: [
+    {{#if cssFramework === 'flexboxgrid2'}}
+    { src: 'flexboxgrid2', lang: 'css' }
+    {{/if}}
     { src: '~/assets/scss/main.scss', lang: 'scss' }
   ],
   /*
@@ -49,6 +52,8 @@ module.exports = {
     ** Libraries and paths to concat into the vendor bundle
     */
     vendor: [
+      'babel-polyfill',
+      'eventsource-polyfill',
       {{#each libs}}
       '{{@key}}'{{#if_eq @index libs.length-1}},{{/if_eq}}
       {{/each}}

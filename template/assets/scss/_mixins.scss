@@ -1,0 +1,60 @@
+@import 'vars';
+
+@function px2em($target, $context: 14) {
+  @return ( ( 1 / $context ) * $target )+0em;
+}
+@function px2rem($target, $context: 14) {
+  @return ( ( 1 / $context ) * $target)+0rem;
+}
+
+{{#if cssFramework === 'bourbon-neat'}}
+@mixin c5-grid-container-width($grid) {
+  @include grid-media($grid) {
+    max-width: map-get($grid, 'container');
+    @include grid-visual($grid: $grid);
+  }
+}
+
+@mixin c5-grid-container() {
+  @include grid-container();
+  @include c5-grid-container-width($neat-grid--sm);
+  @include c5-grid-container-width($neat-grid--md);
+  @include c5-grid-container-width($neat-grid--lg);
+  @include c5-grid-container-width($neat-grid--xl);
+
+  margin: auto;
+}
+
+$columns: 12;
+$gutter: 30px;
+
+$neat-grid: (
+  columns: $columns,
+  gutter: $gutter,
+);
+$neat-grid--sm: (
+  columns: $columns,
+  gutter: $gutter,
+  media: "(min-width: #{$screen-sm-min})",
+  container: $screen-sm-min - 36px // These subtractions bring the container sizes to something familiar (Bootstrap)
+);
+$neat-grid--md: (
+  columns: $columns,
+  gutter: $gutter,
+  media: "(min-width: #{$screen-md-min})",
+  container: $screen-md-min - 48px
+);
+$neat-grid--lg: (
+  columns: $columns,
+  gutter: $gutter,
+  media: "(min-width: #{$screen-lg-min})",
+  container: $screen-lg-min - 32px
+);
+$neat-grid--xl: (
+  columns: $columns,
+  gutter: $gutter,
+  media: "(min-width: 1200px)",
+  container: $screen-xl-min - 30px
+);
+@import '~bourbon-neat/core/neat';
+{{/if}}
